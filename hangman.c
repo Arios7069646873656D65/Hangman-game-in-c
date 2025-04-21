@@ -3,7 +3,7 @@
 #include <string.h>
 
 int main() {
-    char word[] = "albi"; // The hidden word
+    char word[] = ""; // The hidden word
     int attempts = 6; // Total attempts
     int wordLength = strlen(word);
     char masked[wordLength + 1]; // Masked version of the word
@@ -58,7 +58,7 @@ int main() {
                 printf("Incorrect character. You have %d attempts left.\n", attempts);
             }
 
-            // Check if the user has guessed the entire word
+            // Checks if the user has guessed the entire word
             if (strcmp(masked, word) == 0) {
                 printf("Congratulations! You guessed the word: %s\n", word);
                 return 0; // End the game
@@ -71,19 +71,3 @@ int main() {
 }
 
 
-
-Exercise 2)
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-
-    char *szArr[] = {"-101000", "0x345", "20"};
-
-    printf("%ld\n", strtol(szArr[0], NULL, 2));
-    printf("%ld\n", strtol(szArr[1], NULL, 16));
-    printf("%ld\n", strtol(szArr[2], NULL, 0));
-
-    return 0;
-}
